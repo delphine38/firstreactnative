@@ -1,15 +1,21 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View, Button,createStackNavigator } from 'react-native';
+import { StyleSheet, Text, View, Button } from 'react-native';
+// import { createStackNavigator } from 'react-navigation';
+// import { createNativeStackNavigator } from '@react-navigation/native-stack';
+
 import Aboutme from './components/Aboutme';
 
-export default function App() {
+export default function App({ navigation }) {
   return (
     <View style={styles.container}>
       <Aboutme />
       <h2>Petit jeu de Qui es-tu ?</h2>
       <Button
         // onPress={() => Alert.alert('Simple Button pressed')}
-        onPress={() => navigator.navigate('qui')}
+          // onPress={() => navigation.push('Qui')}
+
+        onPress={() => navigation.navigate('Qui')}
+        // onPress={() => this.props.navigation.push('Qui')}
         title="Click"
         color="#2196F3"
         // accessibilityLabel="Learn more about this purple button"
