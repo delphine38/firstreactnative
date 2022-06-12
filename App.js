@@ -4,23 +4,13 @@ import { StyleSheet, Text, View, Button } from 'react-native';
 // import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
 import Aboutme from './components/Aboutme';
+import Nav from './components/Nav';
 
 export default function App({ navigation }) {
   return (
     <View style={styles.container}>
       <Aboutme />
-      <h2>Petit jeu de Qui es-tu ?</h2>
-      <Button
-        // onPress={() => Alert.alert('Simple Button pressed')}
-          // onPress={() => navigation.push('Qui')}
-
-        onPress={() => navigation.navigate('Qui')}
-        // onPress={() => this.props.navigation.push('Qui')}
-        title="Click"
-        color="#2196F3"
-        // accessibilityLabel="Learn more about this purple button"
-      />
-      <Text>Open up App.js to start working on your app!</Text>
+      <Nav />
       <StatusBar style="auto" />
     </View>
   );
